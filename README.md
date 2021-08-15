@@ -106,19 +106,6 @@ export default function Saludar(props){
 ```
 
 ```
-import React from "react"
-
-export default function Saludar(props){
-
-    return(
-        <div>
-            <button onClick={() => props.saludarFn(props.userInfo.name)}>Saludar</button>
-        </div>
-    )
-}
-```
-
-```
 function App() {
 
   const userName = "Marlon Falcon";
