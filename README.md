@@ -55,3 +55,38 @@ export default function Saludar(props){
 import Saludar from './components/Saludar';
 <Saludar name="Marlon Falcon"/>
 ```
+
+# props con objetos
+```
+import Saludar from './components/Saludar';
+function App() {
+
+  const userName = "Marlon Falcon";
+  const edad = 41;
+  const user = {
+    name: "Marlon",
+    edad: 41
+  }
+
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <Saludar userInfo={user}/>
+      </header>
+    </div>
+  );
+}
+```
+
+```
+import React from "react"
+
+export default function Saludar(props){
+    return(
+        <div>
+            <h2>Hola {props.userInfo.name}, tiene {props.userInfo.edad} </h2>
+        </div>
+    )
+}
+```
